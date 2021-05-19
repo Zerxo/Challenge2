@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+ <link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="bg-disableClick hide">
+    <div class="spinner"></div>
+  </div>
+  <div class="app   m-auto" style=" overflow: hidden; top:40px; position: relative;">
+    <div class="head text-light p-3 d-flex align-items-center" style=" flex-direction: column; height: 300px;">
+      <h1 class="mb-4 mt-3">IP Address Tracker</h1>
+      <form id='formGetLocationByIp' class="col-8">
+        <div class="input row">
+        <input type="text" name="ip" style="height: 55px;" class="form-control col" placeholder="Search for any IP address or domain">
+          <button style="background-color: #000; border-radius: 0 5px 5px 0;" class="btn text-center p-0 col-1 "><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+        </div>
+      </form>
+      <div class="information p-2">
+        <ul>
+          <li class="bg-light  text-dark">
+            <span class="text-muted">Ip address</span>
+            <h3 id="ip-show">Null</h3>
+          </li>
+          <li class="bg-light  text-dark">
+            <span class="text-muted">Location</span>
+            <h3 id="location-show">Null</h3>
+          </li>
+          <li class="bg-light  text-dark">
+            <span class="text-muted">Time Zone</span>
+            <h3 id="timezone-show">Null</h3>
+          </li>
+          <li class="bg-light text-dark">
+            <span class="text-muted">ISP</span>
+            <h3 id="location-show">Null</h3>
+          </li>
+        </ul>
+      </div>
+  </div>
+
+<div id="map"  ></div>
+
+</div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.app{
+    width: 90% !important;
+}
+
+#map{
+    height:400px;
+}
+
+.head{
+    background:url(./images/pattern-bg.png);
+    width: 100%;
+    position: relative;
+}
+
+.information{
+    position: absolute;
+    bottom:-20%;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+}
+
+.information ul {
+    display: flex;
+    list-style: none;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-x: auto;
+    width: 90%;
+    margin: auto;
+}
+
+.information ul li {
+    padding:10px ;
+    flex:.4;
+    height: 130px;
+}
+
+.hide{
+    display: none !important;
+}
+.bg-disableClick{
+    z-index: 99999999;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.spinner{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border:transparent 1px solid;
+    border-right:3px solid #566ed5;
+    border-left:3px solid #818baf;
+
+    animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0) ;
+    }
+    
+    100%{
+        transform: rotate(360deg) ;
+        border-right-color: red;
+    }
+}
+
+@media (max-width:500px){
+    .app{
+        width: 100% !important;
+        margin:0 !important;
+        top:0 !important;
+    }
+    .information{
+        top:200px
+    }
+    .information ul {
+        flex-direction: column;
+        
+    }
+}
